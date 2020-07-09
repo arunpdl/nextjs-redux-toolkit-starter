@@ -1,0 +1,9 @@
+import Layout from "components/Layout";
+
+export default function Home() {
+  return (
+    <Layout title="Home">
+      <div>Welcome to Next js</div>
+    </Layout>
+  );
+}
