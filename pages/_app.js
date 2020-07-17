@@ -1,5 +1,6 @@
 import { Provider } from "react-redux";
 import store from "app/store";
+import "assets/styles/index.css";
 
 const MyApp = ({ Component, pageProps }) => {
   return (
