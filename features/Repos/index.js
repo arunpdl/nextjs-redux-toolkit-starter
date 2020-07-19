@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import { useEffect } from "react";
+import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { loadRepos, selectRepos } from "./reposSlice";
 
@@ -43,7 +43,14 @@ const ReposComponent = () => {
           <h1>Repositories</h1>
           <ul>
             {repos?.map((eachRepo) => (
-              <li key={eachRepo.id}>{eachRepo.name}</li>
+              <Link
+                key={eachRepo.id}
+                href={`/repos/${username}/${eachRepo.name}`}
+              >
+                <a>
+                  <li>{eachRepo.name}</li>
+                </a>
+              </Link>
             ))}
           </ul>
         </>
